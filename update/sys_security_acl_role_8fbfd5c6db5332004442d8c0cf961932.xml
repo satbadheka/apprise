@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>satya.badheka</sys_created_by>
+        <sys_created_on>2017-06-13 07:32:53</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>8fbfd5c6db5332004442d8c0cf961932</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_18132_apprise_notification.x_18132_apprise.notification_user</sys_name>
+        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
+        <sys_security_acl display_value="x_18132_apprise_notification">43bfd5c6db5332004442d8c0cf96192e</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_8fbfd5c6db5332004442d8c0cf961932</sys_update_name>
+        <sys_updated_by>satya.badheka</sys_updated_by>
+        <sys_updated_on>2017-06-13 07:32:53</sys_updated_on>
+        <sys_user_role display_value="x_18132_apprise.notification_user" name="x_18132_apprise.notification_user">f61ff402db1332004442d8c0cf961937</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

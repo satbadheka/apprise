@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_18132_apprise.checkscope</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>checkscope</name>
+        <script><![CDATA[var checkscope = Class.create();
+checkscope.prototype = {
+    initialize: function() {
+	
+    },
+	
+	allowscope:function(){
+		var gr = new GlideRecord('sys_scope');
+		var appriseID = '';
+		gr.addQuery('name', 'Apprise');
+		gr.query();
+		if (gr.next()){
+			appriseID = gr.sys_id;
+		}
+		if (gs.getCurrentApplicationId() == appriseID){
+			return true;
+		}
+		else{
+			return false;
+		}
+	},
+
+    type: 'checkscope'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>satya.badheka</sys_created_by>
+        <sys_created_on>2017-06-15 06:36:45</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>2f85636adb1332004442d8c0cf96198c</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>checkscope</sys_name>
+        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
+        <sys_update_name>sys_script_include_2f85636adb1332004442d8c0cf96198c</sys_update_name>
+        <sys_updated_by>satya.badheka</sys_updated_by>
+        <sys_updated_on>2017-06-15 06:49:41</sys_updated_on>
+    </sys_script_include>
+</record_update>

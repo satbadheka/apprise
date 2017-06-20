@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Notification" max_length="40" name="x_18132_apprise_notification" type="collection">
+        <element label="Call Message" max_length="1000" name="call_message" type="string"/>
+        <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
+        <element choice="1" choice_field="category" label="Recipient" max_length="80" name="recipient" reference="sys_documentation" reference_qual="javascript:&quot;nameINtask,&quot; + current.table" type="glide_list" use_reference_qualifier="advanced">
+            <choice/>
+        </element>
+        <element choice="3" label="Service Provider" mandatory="true" max_length="40" name="service_provider" type="choice">
+            <choice>
+                <element label="Nexmo" value="nexmo"/>
+                <element label="Twilio" value="twilio"/>
+            </choice>
+        </element>
+        <element label="SMS Message" max_length="160" name="sms_message" type="string"/>
+        <element label="Table" mandatory="true" max_length="80" name="table" type="table_name"/>
+    </element>
+</database>

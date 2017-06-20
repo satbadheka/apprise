@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sysevent_script_action">
+    <sysevent_script_action action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition_script/>
+        <description/>
+        <event_name>x_18132_apprise.notification</event_name>
+        <name>Send Notifications</name>
+        <order>100</order>
+        <script><![CDATA[sendNotification();
+
+function sendNotification(){
+	var SMSMessage = jseval(event.parm1);
+	var returnArray = event.parm2;
+//	gs.info('ReturnArray: ' + returnArray);
+	var eventParamList = returnArray.toString();
+	var eventParamArray = eventParamList.split(",");
+	var serviceProvider = eventParamArray[eventParamArray.length - 1];
+	
+	
+	//Sending Twilio SMS notification
+	for (var i=0; i < eventParamArray.length - 1; i++) {
+		
+	if (serviceProvider == 'twilio'){
+			try { 
+				 var tw = new sn_ws.RESTMessageV2('x_18132_apprise.Twilio Message', 'post');
+				 tw.setEndpoint('https://api.twilio.com/2010-04-01/Accounts/' + gs.getProperty('x_18132_apprise.twilioSID') + '/Messages');
+				 tw.setStringParameterNoEscape('From', gs.getProperty('x_18132_apprise.twilioNumber'));
+				 tw.setStringParameterNoEscape('Body', SMSMessage);
+				 tw.setStringParameterNoEscape('To', eventParamArray[i]);
+			   	 tw.setBasicAuth(gs.getProperty('x_18132_apprise.twilioSID'),gs.getProperty('x_18132_apprise.twilioAuthToken'));
+			
+
+				 var twresponse = tw.execute();
+				 var twresponseBody = twresponse.getBody();
+				 gs.info(twresponseBody);
+			//	 gs.info('To' + twresponseBody.getNodeText('//To'));
+			//	 var twhttpStatus = twresponse.getStatusCode();
+				}
+			catch(ex) {
+				 gs.info(ex);
+				} 
+	}
+	else if (serviceProvider == 'nexmo'){
+		
+		//Sending Nexmo SMS Notification
+	 try { 
+			var nx = new sn_ws.RESTMessageV2('x_18132_apprise.Nexmo Message', 'post');
+			nx.setStringParameter('from', gs.getProperty('x_18132_apprise.nexmoNumber'));
+			nx.setStringParameter('to', eventParamArray[i]);
+			nx.setStringParameter('text', SMSMessage);
+			nx.setStringParameter('api_key', gs.getProperty('x_18132_apprise.nexmoAPIKey'));
+			nx.setStringParameter('api_secret', gs.getProperty('x_18132_apprise.nexmoAPISecret'));
+
+			var nxresponse = nx.execute();
+			var nxresponseBody = nxresponse.getBody();
+			gs.info(nxresponseBody);
+		//	var nxhttpStatus = nxresponse.getStatusCode();
+		}
+	catch(ex) {
+		//	var nxmessage = ex.getMessage();
+			gs.info(ex);
+	}
+	
+	}
+		
+	}//for loop
+	
+	
+	function jseval(str) {
+	var s = new String(str);
+    s = s.replace(/\$\{(.*?)\s*\}/g, function(str, p1) {
+		return current.getDisplayValue(p1);
+    });
+    return s;
+	}
+	
+	
+	// Sending Call Notification
+	
+/*	var requestCall = new sn_ws.RESTMessageV2();
+	var URL = 'https://dev19625.service-now.com/api/x_18132_apprise/twiliocall/' + callMessage + '/record';
+	URL = URL.replaceAll(" ","%20");
+	requestCall.setEndpoint(URL);
+	requestCall.setHttpMethod('GET');
+
+//Eg. UserName="admin", Password="admin" for this code sample.
+	var user = 'satya.badheka';
+	var password = 'same2same';
+
+	requestCall.setBasicAuth(user,password);
+	requestCall.setRequestHeader("Accept","application/xml");
+
+	var responseCall = requestCall.execute();
+	gs.info(responseCall.getBody());
+	
+	try { 
+	 var r = new sn_ws.RESTMessageV2('x_18132_apprise.Twilio Call', 'post');
+	 r.setStringParameterNoEscape('From', '+14804185371');
+	 r.setStringParameterNoEscape('To', '+919986025286');
+	 r.setStringParameterNoEscape('Url', URL);
+
+	 var response = r.execute();
+	 var responseBody = response.getBody();
+	 gs.info(responseBody);
+	 var httpStatus = response.getStatusCode();
+	}
+	catch(ex) {
+	 var message = ex.getMessage();
+	 gs.info(message);
+	}*/
+	
+	
+}]]></script>
+        <synchronous>false</synchronous>
+        <sys_class_name>sysevent_script_action</sys_class_name>
+        <sys_created_by>satya.badheka</sys_created_by>
+        <sys_created_on>2017-06-13 08:07:12</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9e82650adb5332004442d8c0cf961933</sys_id>
+        <sys_mod_count>49</sys_mod_count>
+        <sys_name>Send Notifications</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
+        <sys_update_name>sysevent_script_action_9e82650adb5332004442d8c0cf961933</sys_update_name>
+        <sys_updated_by>satya.badheka</sys_updated_by>
+        <sys_updated_on>2017-06-19 08:53:16</sys_updated_on>
+    </sysevent_script_action>
+</record_update>

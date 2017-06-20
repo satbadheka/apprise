@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_18132_apprise.ConstructNotification</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ConstructNotification</name>
+        <script><![CDATA[var ConstructNotification = Class.create();
+ConstructNotification.prototype = {
+    initialize: function() {
+    },
+generateNotification:function(name, scriptRecipient){
+	// Get the SMS Message String from the Apprise Notification definition
+	var apprise_r = new GlideRecord('x_18132_apprise_notification');
+	apprise_r.addQuery('name', name);
+	apprise_r.query();
+	if(apprise_r.next()){
+//		gs.info('apprise.smsMessage' + apprise_r.sms_message);
+		if (!apprise_r.sms_message.nil()){
+			var recipientList = new Array(); // Initialize the array to store numbers of all notification recipient
+			
+			//Check if the script include call has passed the recipient number in the script
+			// If number is not passed, fetch the recipient details from the Apprise notification definition
+			//Else if a number is passed use that to send the notification instead of notification definition
+		//	gs.info('scriptRecipient' + scriptRecipient);
+			if (scriptRecipient==''){				
+				//convert the recipient list from the apprise notification definition to array
+				var list = apprise_r.recipient.toString();
+		//		gs.info('list: ' + list);
+				var array = list.split(",");
+				for (var i=0; i < array.length; i++) {
+					//For each recieved list (which is a label) get the field value
+					// sys_documentation = field label table
+					// sys_documentation.element = field value
+					//e.g Label = Caller // element=caller_id
+					var label_r = new GlideRecord('sys_documentation');
+					label_r.addQuery('sys_id', array[i]);
+					label_r.query();
+				
+					if(label_r.next()){
+						//Get the value of the user-recipient in current variable e.g current.caller_id
+						var userID = current.getValue(label_r.element);
+						//Get the phone number by querying the sys user table
+						var user_r = new GlideRecord('sys_user');
+						user_r.addQuery('sys_id', userID);
+						user_r.query();
+					
+						if(user_r.next()){
+							recipientList.push(user_r.phone);
+						}
+					}
+				 }
+				
+			}
+			else {
+				recipientList.push(scriptRecipient);
+			}
+			//Create an array including all the recipients and the service provider fetched from the notification definition
+			var returnArray = [recipientList,apprise_r.service_provider];
+	//		gs.info('returnarray: ' + returnArray);
+			//Trigger the event to send the notification
+			gs.eventQueue('x_18132_apprise.notification',current, apprise_r.sms_message, returnArray);
+			return ;
+		}
+	}
+	
+	},
+    type: 'ConstructNotification'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>satya.badheka</sys_created_by>
+        <sys_created_on>2017-06-14 12:54:24</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>1befaf5adbd332004442d8c0cf9619bd</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>ConstructNotification</sys_name>
+        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
+        <sys_update_name>sys_script_include_1befaf5adbd332004442d8c0cf9619bd</sys_update_name>
+        <sys_updated_by>satya.badheka</sys_updated_by>
+        <sys_updated_on>2017-06-19 08:44:31</sys_updated_on>
+    </sys_script_include>
+</record_update>

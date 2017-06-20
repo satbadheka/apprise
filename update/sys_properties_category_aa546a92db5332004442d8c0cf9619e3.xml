@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_properties_category">
+    <sys_properties_category action="INSERT_OR_UPDATE">
+        <name>Apprise Properties</name>
+        <sys_class_name>sys_properties_category</sys_class_name>
+        <sys_created_by>satya.badheka</sys_created_by>
+        <sys_created_on>2017-06-14 07:12:01</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>aa546a92db5332004442d8c0cf9619e3</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Apprise Properties</sys_name>
+        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
+        <sys_update_name>sys_properties_category_aa546a92db5332004442d8c0cf9619e3</sys_update_name>
+        <sys_updated_by>satya.badheka</sys_updated_by>
+        <sys_updated_on>2017-06-14 07:37:33</sys_updated_on>
+        <title><![CDATA[<p style="text-align: left;"><span style="font-size: 14pt;"><strong>Fill in the account details below based on the service provider of choice. Either/Both Twilio and Nexmo can be used as required.</strong></span></p>
+<p style="text-align: left;"><span style="font-size: 10pt;"> You will be able to further select the service provider on each notification configured</span></p>
+<p> </p>
+<p> </p>]]></title>
+    </sys_properties_category>
+    <sys_translated_text action="delete_multiple" query="documentkey=aa546a92db5332004442d8c0cf9619e3"/>
+</record_update>
