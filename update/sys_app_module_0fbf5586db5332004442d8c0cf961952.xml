@@ -14,12 +14,12 @@
         <map_page/>
         <mobile_title>Notifications</mobile_title>
         <mobile_view_name>Mobile</mobile_view_name>
-        <name>x_18132_apprise_notification</name>
+        <name>x_souk_apprise_notification</name>
         <order/>
         <override_menu_roles>false</override_menu_roles>
         <query/>
         <report/>
-        <roles>x_18132_apprise.notification_user</roles>
+        <roles>x_souk_apprise.notification_user</roles>
         <survey/>
         <survey_overwrite>true</survey_overwrite>
         <sys_class_name>sys_app_module</sys_class_name>
@@ -32,7 +32,7 @@
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Notifications</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
