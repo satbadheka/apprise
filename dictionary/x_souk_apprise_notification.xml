@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element label="Notification" max_length="40" name="x_18132_apprise_notification" type="collection">
+    <element label="Notification" max_length="40" name="x_souk_apprise_notification" type="collection">
         <element label="Call Message" max_length="1000" name="call_message" type="string"/>
         <element display="true" label="Name" mandatory="true" max_length="100" name="name" type="string"/>
         <element choice="1" choice_field="category" label="Recipient" max_length="80" name="recipient" reference="sys_documentation" reference_qual="javascript:&quot;nameINtask,&quot; + current.table" type="glide_list" use_reference_qualifier="advanced">
