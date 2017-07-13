@@ -4,7 +4,7 @@
         <active>true</active>
         <condition_script/>
         <description/>
-        <event_name>x_18132_apprise.notification</event_name>
+        <event_name>x_souk_apprise.notification</event_name>
         <name>Send Notifications</name>
         <order>100</order>
         <script><![CDATA[sendNotification();
@@ -23,12 +23,12 @@ function sendNotification(){
 		
 	if (serviceProvider == 'twilio'){
 			try { 
-				 var tw = new sn_ws.RESTMessageV2('x_18132_apprise.Twilio Message', 'post');
-				 tw.setEndpoint('https://api.twilio.com/2010-04-01/Accounts/' + gs.getProperty('x_18132_apprise.twilioSID') + '/Messages');
-				 tw.setStringParameterNoEscape('From', gs.getProperty('x_18132_apprise.twilioNumber'));
+				 var tw = new sn_ws.RESTMessageV2('x_souk_apprise.Twilio Message', 'post');
+				 tw.setEndpoint('https://api.twilio.com/2010-04-01/Accounts/' + gs.getProperty('x_souk_apprise.twilioSID') + '/Messages');
+				 tw.setStringParameterNoEscape('From', gs.getProperty('x_souk_apprise.twilioNumber'));
 				 tw.setStringParameterNoEscape('Body', SMSMessage);
 				 tw.setStringParameterNoEscape('To', eventParamArray[i]);
-			   	 tw.setBasicAuth(gs.getProperty('x_18132_apprise.twilioSID'),gs.getProperty('x_18132_apprise.twilioAuthToken'));
+			   	 tw.setBasicAuth(gs.getProperty('x_souk_apprise.twilioSID'),gs.getProperty('x_souk_apprise.twilioAuthToken'));
 			
 
 				 var twresponse = tw.execute();
@@ -45,12 +45,12 @@ function sendNotification(){
 		
 		//Sending Nexmo SMS Notification
 	 try { 
-			var nx = new sn_ws.RESTMessageV2('x_18132_apprise.Nexmo Message', 'post');
-			nx.setStringParameter('from', gs.getProperty('x_18132_apprise.nexmoNumber'));
+			var nx = new sn_ws.RESTMessageV2('x_souk_apprise.Nexmo Message', 'post');
+			nx.setStringParameter('from', gs.getProperty('x_souk_apprise.nexmoNumber'));
 			nx.setStringParameter('to', eventParamArray[i]);
 			nx.setStringParameter('text', SMSMessage);
-			nx.setStringParameter('api_key', gs.getProperty('x_18132_apprise.nexmoAPIKey'));
-			nx.setStringParameter('api_secret', gs.getProperty('x_18132_apprise.nexmoAPISecret'));
+			nx.setStringParameter('api_key', gs.getProperty('x_souk_apprise.nexmoAPIKey'));
+			nx.setStringParameter('api_secret', gs.getProperty('x_souk_apprise.nexmoAPISecret'));
 
 			var nxresponse = nx.execute();
 			var nxresponseBody = nxresponse.getBody();
@@ -79,7 +79,7 @@ function sendNotification(){
 	// Sending Call Notification
 	
 /*	var requestCall = new sn_ws.RESTMessageV2();
-	var URL = 'https://dev19625.service-now.com/api/x_18132_apprise/twiliocall/' + callMessage + '/record';
+	var URL = 'https://dev19625.service-now.com/api/x_souk_apprise/twiliocall/' + callMessage + '/record';
 	URL = URL.replaceAll(" ","%20");
 	requestCall.setEndpoint(URL);
 	requestCall.setHttpMethod('GET');
@@ -95,7 +95,7 @@ function sendNotification(){
 	gs.info(responseCall.getBody());
 	
 	try { 
-	 var r = new sn_ws.RESTMessageV2('x_18132_apprise.Twilio Call', 'post');
+	 var r = new sn_ws.RESTMessageV2('x_souk_apprise.Twilio Call', 'post');
 	 r.setStringParameterNoEscape('From', '+14804185371');
 	 r.setStringParameterNoEscape('To', '+919986025286');
 	 r.setStringParameterNoEscape('Url', URL);
@@ -123,7 +123,7 @@ function sendNotification(){
         <sys_mod_count>49</sys_mod_count>
         <sys_name>Send Notifications</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
