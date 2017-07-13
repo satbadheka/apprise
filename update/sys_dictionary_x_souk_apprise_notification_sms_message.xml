@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="sms_message" table="x_18132_apprise_notification">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="sms_message" table="x_souk_apprise_notification">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
@@ -34,7 +34,7 @@
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>160</max_length>
-        <name>x_18132_apprise_notification</name>
+        <name>x_souk_apprise_notification</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
@@ -56,11 +56,11 @@
         <sys_id>4510e9c6db5332004442d8c0cf9619c5</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>SMS Message</sys_name>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
-        <sys_update_name>sys_dictionary_x_18132_apprise_notification_sms_message</sys_update_name>
+        <sys_update_name>sys_dictionary_x_souk_apprise_notification_sms_message</sys_update_name>
         <sys_updated_by>satya.badheka</sys_updated_by>
         <sys_updated_on>2017-06-13 07:35:59</sys_updated_on>
         <table_reference>false</table_reference>
