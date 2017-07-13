@@ -5,7 +5,7 @@
         <license_condition/>
         <license_model>none</license_model>
         <license_roles/>
-        <name>x_18132_apprise_notification</name>
+        <name>x_souk_apprise_notification</name>
         <op_delete>true</op_delete>
         <op_insert>true</op_insert>
         <op_update>true</op_update>
@@ -16,8 +16,8 @@
         <sys_customer_update>true</sys_customer_update>
         <sys_id>3fbfd5c6db5332004442d8c0cf961981</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>x_18132_apprise_notification</sys_name>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_name>x_souk_apprise_notification</sys_name>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
