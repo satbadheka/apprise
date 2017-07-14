@@ -12,10 +12,10 @@
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
-        <scope>x_18132_apprise</scope>
+        <scope>x_souk_apprise</scope>
         <scoped_administration>false</scoped_administration>
         <short_description/>
-        <source>x_18132_apprise</source>
+        <source>x_souk_apprise</source>
         <store_correlation_id/>
         <store_url/>
         <sys_class_name>sys_app</sys_class_name>
@@ -28,7 +28,7 @@
         <sys_updated_on>2017-06-20 06:11:24</sys_updated_on>
         <template/>
         <trackable>true</trackable>
-        <user_role display_value="x_18132_apprise.notification_user" name="x_18132_apprise.notification_user">f61ff402db1332004442d8c0cf961937</user_role>
+        <user_role display_value="x_souk_apprise.notification_user" name="x_souk_apprise.notification_user">f61ff402db1332004442d8c0cf961937</user_role>
         <vendor/>
         <vendor_prefix/>
         <version>1.0.0</version>
