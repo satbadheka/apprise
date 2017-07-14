@@ -11,7 +11,7 @@
         <sys_id>8458860edb9332004442d8c0cf961994</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>GlideEvaluator.evaluateScript</sys_name>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
