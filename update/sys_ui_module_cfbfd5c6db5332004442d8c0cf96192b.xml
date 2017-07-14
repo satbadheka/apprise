@@ -8,7 +8,7 @@
         <order/>
         <path/>
         <path_relative_to_root>false</path_relative_to_root>
-        <roles>x_18132_apprise.notification_user</roles>
+        <roles>x_souk_apprise.notification_user</roles>
         <sys_class_name>sys_ui_module</sys_class_name>
         <sys_created_by>satya.badheka</sys_created_by>
         <sys_created_on>2017-06-13 07:32:52</sys_created_on>
@@ -18,14 +18,14 @@
         <sys_id>cfbfd5c6db5332004442d8c0cf96192b</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name>Notifications</sys_name>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
         <sys_update_name>sys_ui_module_cfbfd5c6db5332004442d8c0cf96192b</sys_update_name>
         <sys_updated_by>satya.badheka</sys_updated_by>
         <sys_updated_on>2017-06-13 07:34:13</sys_updated_on>
-        <table>x_18132_apprise_notification</table>
+        <table>x_souk_apprise_notification</table>
         <uncancelable>false</uncancelable>
         <view_name/>
     </sys_ui_module>
