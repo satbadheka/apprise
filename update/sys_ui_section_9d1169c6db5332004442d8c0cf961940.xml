@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_ui_section caption="" section_id="9d1169c6db5332004442d8c0cf961940" sys_domain="global" table="x_18132_apprise_notification" version="3" view="">
+    <sys_ui_section caption="" section_id="9d1169c6db5332004442d8c0cf961940" sys_domain="global" table="x_souk_apprise_notification" version="3" view="">
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
@@ -9,7 +9,7 @@
             <sys_id>6e245c6edb1732004442d8c0cf961958</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_18132_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_souk_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 15:19:40</sys_updated_on>
             <sys_user/>
@@ -23,7 +23,7 @@
             <sys_id>e2245c6edb1732004442d8c0cf961959</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_18132_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_souk_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 15:19:40</sys_updated_on>
             <sys_user/>
@@ -37,7 +37,7 @@
             <sys_id>66245c6edb1732004442d8c0cf961959</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_18132_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_souk_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 15:19:40</sys_updated_on>
             <sys_user/>
@@ -51,7 +51,7 @@
             <sys_id>e6245c6edb1732004442d8c0cf961959</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_18132_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_souk_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 15:19:40</sys_updated_on>
             <sys_user/>
@@ -65,7 +65,7 @@
             <sys_id>6a245c6edb1732004442d8c0cf961959</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_18132_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
+            <sys_ui_section caption="NULL" display_value="" name="x_souk_apprise_notification" sys_domain="global" view="Default view">9d1169c6db5332004442d8c0cf961940</sys_ui_section>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 15:19:40</sys_updated_on>
             <sys_user/>
@@ -74,7 +74,7 @@
         <sys_ui_section action="INSERT_OR_UPDATE">
             <caption/>
             <header>false</header>
-            <name>x_18132_apprise_notification</name>
+            <name>x_souk_apprise_notification</name>
             <roles/>
             <sys_class_name>sys_ui_section</sys_class_name>
             <sys_created_by>satya.badheka</sys_created_by>
@@ -84,9 +84,9 @@
             <sys_domain_path>/</sys_domain_path>
             <sys_id>9d1169c6db5332004442d8c0cf961940</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_18132_apprise_notification</sys_name>
+            <sys_name>x_souk_apprise_notification</sys_name>
             <sys_overrides/>
-            <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+            <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
