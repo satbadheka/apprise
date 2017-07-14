@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update>
-    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_18132_apprise_notification" version="2" view="">
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_souk_apprise_notification" version="2" view="">
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>name</element>
-            <list_id display_value="x_18132_apprise_notification" element="NULL" name="x_18132_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
+            <list_id display_value="x_souk_apprise_notification" element="NULL" name="x_souk_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
@@ -19,7 +19,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sms_message</element>
-            <list_id display_value="x_18132_apprise_notification" element="NULL" name="x_18132_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
+            <list_id display_value="x_souk_apprise_notification" element="NULL" name="x_souk_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
@@ -34,7 +34,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>service_provider</element>
-            <list_id display_value="x_18132_apprise_notification" element="NULL" name="x_18132_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
+            <list_id display_value="x_souk_apprise_notification" element="NULL" name="x_souk_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>2</position>
@@ -49,7 +49,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_created_on</element>
-            <list_id display_value="x_18132_apprise_notification" element="NULL" name="x_18132_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
+            <list_id display_value="x_souk_apprise_notification" element="NULL" name="x_souk_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>3</position>
@@ -64,7 +64,7 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>sys_updated_on</element>
-            <list_id display_value="x_18132_apprise_notification" element="NULL" name="x_18132_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
+            <list_id display_value="x_souk_apprise_notification" element="NULL" name="x_souk_apprise_notification" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e590ba9adb5332004442d8c0cf9619cb</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>4</position>
@@ -81,7 +81,7 @@
             <element/>
             <max_value>false</max_value>
             <min_value>false</min_value>
-            <name>x_18132_apprise_notification</name>
+            <name>x_souk_apprise_notification</name>
             <parent/>
             <position/>
             <relationship/>
@@ -94,12 +94,12 @@
             <sys_domain_path>/</sys_domain_path>
             <sys_id>e590ba9adb5332004442d8c0cf9619cb</sys_id>
             <sys_mod_count>0</sys_mod_count>
-            <sys_name>x_18132_apprise_notification</sys_name>
-            <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+            <sys_name>x_souk_apprise_notification</sys_name>
+            <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
             <sys_policy/>
             <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
             <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
-            <sys_update_name>sys_ui_list_x_18132_apprise_notification_null</sys_update_name>
+            <sys_update_name>sys_ui_list_x_souk_apprise_notification_null</sys_update_name>
             <sys_updated_by>satya.badheka</sys_updated_by>
             <sys_updated_on>2017-06-14 08:04:36</sys_updated_on>
             <sys_user/>
