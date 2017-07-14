@@ -26,7 +26,7 @@ function createBusinessRule() {
 	var gr = new GlideRecord('sys_script');  
 	gr.initialize();  
 	gr.name = current.name;
-	gr.sys_scope.scope = 'x_18132_apprise';
+	gr.sys_scope.scope = 'x_souk_apprise';
 	gr.collection = current.table;
 	gr.advanced = true;
 	gr.script = '(function executeRule(current, previous /*null when async*/) {\n' + '\tvar appriseNotification = new ConstructNotification();\n' + '\tappriseNotification.generateNotification(\''+ current.name +'\', \'\');\n' + '})(current, previous);';
@@ -48,14 +48,14 @@ function createBusinessRule() {
         <sys_mod_count>24</sys_mod_count>
         <sys_name>Create Business Rule</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
         <sys_update_name>sys_ui_action_b47d4deadb9732004442d8c0cf9619e9</sys_update_name>
         <sys_updated_by>satya.badheka</sys_updated_by>
         <sys_updated_on>2017-06-15 18:05:49</sys_updated_on>
-        <table>x_18132_apprise_notification</table>
+        <table>x_souk_apprise_notification</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>true</ui16_compatible>
     </sys_ui_action>
