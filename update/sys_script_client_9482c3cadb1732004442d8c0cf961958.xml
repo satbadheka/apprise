@@ -36,14 +36,14 @@
         <sys_mod_count>5</sys_mod_count>
         <sys_name>Create Recipient List</sys_name>
         <sys_overrides/>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
         <sys_update_name>sys_script_client_9482c3cadb1732004442d8c0cf961958</sys_update_name>
         <sys_updated_by>satya.badheka</sys_updated_by>
         <sys_updated_on>2017-06-13 15:02:41</sys_updated_on>
-        <table>x_18132_apprise_notification</table>
+        <table>x_souk_apprise_notification</table>
         <type>onLoad</type>
         <ui_type>0</ui_type>
         <view/>
