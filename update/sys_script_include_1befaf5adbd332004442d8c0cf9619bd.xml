@@ -3,7 +3,7 @@
     <sys_script_include action="INSERT_OR_UPDATE">
         <access>public</access>
         <active>true</active>
-        <api_name>x_18132_apprise.ConstructNotification</api_name>
+        <api_name>x_souk_apprise.ConstructNotification</api_name>
         <client_callable>false</client_callable>
         <description/>
         <name>ConstructNotification</name>
@@ -13,7 +13,7 @@ ConstructNotification.prototype = {
     },
 generateNotification:function(name, scriptRecipient){
 	// Get the SMS Message String from the Apprise Notification definition
-	var apprise_r = new GlideRecord('x_18132_apprise_notification');
+	var apprise_r = new GlideRecord('x_souk_apprise_notification');
 	apprise_r.addQuery('name', name);
 	apprise_r.query();
 	if(apprise_r.next()){
@@ -61,7 +61,7 @@ generateNotification:function(name, scriptRecipient){
 			var returnArray = [recipientList,apprise_r.service_provider];
 	//		gs.info('returnarray: ' + returnArray);
 			//Trigger the event to send the notification
-			gs.eventQueue('x_18132_apprise.notification',current, apprise_r.sms_message, returnArray);
+			gs.eventQueue('x_souk_apprise.notification',current, apprise_r.sms_message, returnArray);
 			return ;
 		}
 	}
@@ -76,7 +76,7 @@ generateNotification:function(name, scriptRecipient){
         <sys_id>1befaf5adbd332004442d8c0cf9619bd</sys_id>
         <sys_mod_count>23</sys_mod_count>
         <sys_name>ConstructNotification</sys_name>
-        <sys_package display_value="Apprise" source="x_18132_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
+        <sys_package display_value="Apprise" source="x_souk_apprise">c76c12fddb1732004442d8c0cf961949</sys_package>
         <sys_policy>read</sys_policy>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Apprise">c76c12fddb1732004442d8c0cf961949</sys_scope>
